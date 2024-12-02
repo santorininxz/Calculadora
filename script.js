@@ -107,29 +107,6 @@ keys.addEventListener('click', event => {
   }
 });
 
-
-// Funcionalidade com teclado
-// Adiciona os eventos aos botões
-keys.addEventListener('click', event => {
-  const target = event.target;
-
-  if (!target.matches('button')) return; // Ignora qualquer clique fora de um botão
-  
-  const action = target.dataset.action;
-
-  if (target.textContent === 'C') {
-    clearDisplay(); // Limpa a tela
-  } else if (target.textContent === '.') {
-    addDecimal(); // Adiciona um ponto decimal
-  } else if (action === 'add' || action === 'subtract' || action === 'multiply' || action === 'divide') {
-    handleOperator(action); // Trata os operadores
-  } else if (action === 'calculate') {
-    calculate(); // Realiza o cálculo
-  } else {
-    handleNumber(target.textContent); // Trata os números
-  }
-});
-
 // Adiciona suporte ao teclado
 document.addEventListener('keydown', event => {
   const key = event.key;
