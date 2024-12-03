@@ -108,7 +108,7 @@ keys.addEventListener('click', event => {
 });
 
 // Adiciona suporte ao teclado
-document.addEventListener('keydown', event => {
+document.addEventListener('click', event => {
   const key = event.key;
 
   if (!isNaN(key)) {
